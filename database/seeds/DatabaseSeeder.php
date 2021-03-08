@@ -17,9 +17,10 @@ class DatabaseSeeder extends Seeder
         for($i = 0; $i < 3; $i++){
             Template::insert([
                 'name' => $faker->sentence,
-                'category' => $faker->numberBetween(1,4),
+                'category' => $i+1,
                 'content' => $faker->paragraph,
             ]);
         }
+        $this->call(CandidateTableSeeder::class);
     }
 }

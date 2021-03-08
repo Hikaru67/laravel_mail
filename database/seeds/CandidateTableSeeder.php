@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Candidate;
+//use App\Candidate;
+use App\Models\Candidate;
 
 class CandidateTableSeeder extends Seeder
 {
@@ -22,7 +23,7 @@ class CandidateTableSeeder extends Seeder
                 'name' => $faker->name(),
                 'phone' => $faker->phoneNumber,
                 'email'=> $faker->email,
-                'position'=>  $faker->randomDigit,
+                'position'=>  rand(0,3),
                 'status'=> rand(0,1),
 
             ]);

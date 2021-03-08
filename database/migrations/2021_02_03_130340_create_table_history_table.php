@@ -18,10 +18,12 @@ class CreateTableHistoryTable extends Migration
             $table->integer('candidate_id');
             $table->integer('template_id');
             $table->integer('position');
-            $table->dateTime('datetime_interview');
-            $table->date('date_work');
-            $table->float('salary');
+            $table->dateTime('datetime_interview')->nullable();
+            $table->date('date_work')->nullable();
+            $table->string('candidate_email');
+            $table->float('salary')->default(0);
             $table->text('content');
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }
