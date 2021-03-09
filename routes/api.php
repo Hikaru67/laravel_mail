@@ -38,7 +38,12 @@ Route::group(['namespace' => $namespace,  ], function(){
     Route::post('/logout', 'AuthController@logout');
     Route::get('/user','AuthController@user');
 
-}); 
+});
+
+Route::middleware('api')->group(function () {
+    Route::get('users', 'UserController@index');
+    Route::get('users/{id}', 'UserController@show');
+});
 
 Route::get('getMailThank', 'TemplateController@getTemplateThankApi');
 Route::get('getMailIntern', 'TemplateController@getTemplateInternApi');

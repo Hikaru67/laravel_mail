@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Template;
+use App\Models\User;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
 
@@ -22,5 +23,6 @@ class DatabaseSeeder extends Seeder
             ]);
         }
         $this->call(CandidateTableSeeder::class);
+        $user = factory(App\Models\User::class, 55)->create();
     }
 }

@@ -10,6 +10,9 @@ use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 
+/**
+ * @method static find(string $id)
+ */
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
