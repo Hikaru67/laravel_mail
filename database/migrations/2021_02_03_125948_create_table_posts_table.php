@@ -15,9 +15,12 @@ class CreateTablePostsTable extends Migration
     {
         Schema::create('candidate', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('firstName');
+            $table->string('lastName');
             $table->string('phone');
             $table->string('email');
+            $table->text('linkCv');
+            $table->string('origin');
             $table->integer('position');
             $table->tinyInteger('status');
             $table->timestamps();

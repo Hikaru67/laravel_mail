@@ -14,5 +14,5 @@ use Illuminate\Notifications\Notifiable;
 class Candidate extends Model
 {
   protected $table = 'candidate';
-  protected $fillable = ['name','phone','email','position','status'];
+  protected $fillable = ['firstName', 'lastName', 'phone','email', 'linkCv', 'origin', 'position','status'];
 }

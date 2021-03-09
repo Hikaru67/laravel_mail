@@ -20,12 +20,14 @@ class CandidateTableSeeder extends Seeder
         // And now, let's create a few articles in our database:
         for ($i = 0; $i < 50; $i++) {
             Candidate::create([
-                'name' => $faker->name(),
+                'firstName' => $faker->firstName,
+                'lastName' => $faker->lastName,
                 'phone' => $faker->phoneNumber,
                 'email'=> $faker->email,
-                'position'=>  rand(0,3),
+                'linkCv' => $faker->url,
+                'origin' => rand(0,2),
+                'position'=>  rand(1,3),
                 'status'=> rand(0,1),
-
             ]);
         }
     }
