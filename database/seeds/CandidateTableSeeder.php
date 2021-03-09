@@ -25,7 +25,7 @@ class CandidateTableSeeder extends Seeder
                 'phone' => $faker->phoneNumber,
                 'email'=> $faker->email,
                 'linkCv' => $faker->url,
-                'origin' => rand(0,2),
+                'origin' => rand(1,3),
                 'position'=>  rand(1,3),
                 'status'=> rand(0,1),
             ]);
